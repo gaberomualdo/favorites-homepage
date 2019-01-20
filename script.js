@@ -19,6 +19,9 @@ function updateFavoritesHTML(){
       var link = prompt("Enter Link: ");
       if(name && link) {
          var currentLinks = JSON.parse(localStorage.getItem("xtrp-favorites-homepage-favorites")) || [];
+         if(!link.startsWith("https://") || !link.startsWith("http://")){
+            link = "http://" + link;
+         }
          currentLinks.push({name: name, url: link});
          localStorage.setItem("xtrp-favorites-homepage-favorites", JSON.stringify(currentLinks));
          updateFavoritesHTML();
