@@ -29,6 +29,7 @@ div.container div.item {
 button.removeLink {
    margin: 0;
    margin-left: calc(((100% - 7rem) / 3) - 2rem);
+   outline: none;
 }
 div.container div.item div.favicon {
    height: 7rem;
